@@ -1,0 +1,119 @@
+{
+  "schema": "tcf-reproduction-v1",
+  "result_scope": "strict full-sort reproduction",
+  "environment": {
+    "python_major_minor": "3.8",
+    "torch": "1.13.1",
+    "numpy": "1.21.6",
+    "scipy": "1.7.3",
+    "tqdm": "4.67.1",
+    "cuda": "11.7"
+  },
+  "training": {
+    "seed": 42,
+    "batch_size": 256,
+    "epochs": 200,
+    "patience": 10,
+    "num_workers": 0,
+    "strict_full_sort_mask": true,
+    "skip_test_after_training": true,
+    "paired_time_factorial": true,
+    "load_model": null,
+    "warmstart": null,
+    "train_scope": "all"
+  },
+  "evaluation": {
+    "metrics": ["HR@10", "NDCG@10", "HR@20", "NDCG@20"],
+    "verification_absolute_tolerance": 0.001
+  },
+  "datasets": {
+    "Beauty": {
+      "data_name": "Beauty",
+      "item_file": "src/data/Beauty.txt",
+      "time_file": "src/data/Beauty_time_time.txt",
+      "lr": 0.00025,
+      "dropout": 0.5,
+      "num_heads": 8,
+      "alpha": 0.2,
+      "weight_decay": 0.0,
+      "time_embedding_scale": 1.0,
+      "complex_dff_epsilon": 0.05,
+      "complex_dff_rank": 8,
+      "markov_window": 5,
+      "markov_tau": 1.75,
+      "markov_lambda": 0.6,
+      "expected": {
+        "HR@10": 0.1053973080534812,
+        "NDCG@10": 0.06403989351528021,
+        "HR@20": 0.14121540043822386,
+        "NDCG@20": 0.07301370313872714
+      }
+    },
+    "Sports": {
+      "data_name": "Sports_and_Outdoors",
+      "item_file": "src/data/Sports_and_Outdoors.txt",
+      "time_file": "src/data/Sports_and_Outdoors_time_time.txt",
+      "lr": 0.001,
+      "dropout": 0.5,
+      "num_heads": 4,
+      "alpha": 0.3,
+      "weight_decay": 0.0,
+      "time_embedding_scale": 1.0,
+      "complex_dff_epsilon": 0.4,
+      "complex_dff_rank": 2,
+      "markov_window": 5,
+      "markov_tau": 3.0,
+      "markov_lambda": 1.4,
+      "expected": {
+        "HR@10": 0.06736333501882129,
+        "NDCG@10": 0.039687841487069275,
+        "HR@20": 0.09427495926737457,
+        "NDCG@20": 0.04645053146701309
+      }
+    },
+    "LastFM": {
+      "data_name": "LastFM_abs1460d",
+      "item_file": "src/data/LastFM_abs1460d.txt",
+      "time_file": "src/data/LastFM_abs1460d_time_time.txt",
+      "lr": 0.001,
+      "dropout": 0.6,
+      "num_heads": 2,
+      "alpha": 0.3,
+      "weight_decay": 0.0001,
+      "time_embedding_scale": 0.2,
+      "complex_dff_epsilon": 0.0025,
+      "complex_dff_rank": 4,
+      "markov_window": 5,
+      "markov_tau": 2.0,
+      "markov_lambda": 1.0,
+      "expected": {
+        "HR@10": 0.0908256880733945,
+        "NDCG@10": 0.05121850085511187,
+        "HR@20": 0.13119266055045872,
+        "NDCG@20": 0.06124583089846873
+      }
+    },
+    "ML1M": {
+      "data_name": "ML-1M_abs90d",
+      "item_file": "src/data/ML-1M_abs90d.txt",
+      "time_file": "src/data/ML-1M_abs90d_time_time.txt",
+      "lr": 0.0006,
+      "dropout": 0.2,
+      "num_heads": 8,
+      "alpha": 0.1,
+      "weight_decay": 0.0001,
+      "time_embedding_scale": 1.0,
+      "complex_dff_epsilon": 0.0025,
+      "complex_dff_rank": 2,
+      "markov_window": 5,
+      "markov_tau": 2.5,
+      "markov_lambda": 0.9,
+      "expected": {
+        "HR@10": 0.3173841059602649,
+        "NDCG@10": 0.18732094335009933,
+        "HR@20": 0.4185430463576159,
+        "NDCG@20": 0.2127070604709924
+      }
+    }
+  }
+}

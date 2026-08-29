@@ -1,0 +1,13 @@
+name: tcf-cpu
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - cpuonly
+  - numpy=1.21.6
+  - python=3.8
+  - pytorch=1.13.1
+  - pip=23.1.2
+  - pip:
+    - scipy==1.7.3
+    - tqdm==4.67.1

@@ -1,0 +1,14 @@
+name: tcf
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - numpy=1.21.6
+  - python=3.8
+  - pytorch=1.13.1
+  - pytorch-cuda=11.7
+  - pip=23.1.2
+  - pip:
+    - scipy==1.7.3
+    - tqdm==4.67.1

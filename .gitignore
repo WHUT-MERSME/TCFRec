@@ -1,0 +1,21 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Training outputs, logs, checkpoints, and experiment summaries
+src/output/
+*.log
+*.console.log
+*.pt
+
+# Raw datasets and local data inspection sandboxes
+src/data/raw/
+src/data/process/raw
+src/data/process/raw/
+src/data/ucsd_amazon_check/
+
+# Regenerable contrastive-learning caches
+src/data/*_same_target.npy
+
+# Temporary data backups
+src/data/*.backup.txt
