@@ -1,7 +1,8 @@
-# TCF
+# TCFRec
 
-Anonymous review artifact for TCF, a sequential recommendation model combining
-wavelet feature enhancement with adaptive frequency-domain filtering.
+Source code for TCFRec (Time-Aware Complex Frequency Recommendation), a sequential
+recommendation model combining wavelet feature enhancement with adaptive
+frequency-domain filtering.
 
 ## Models
 
