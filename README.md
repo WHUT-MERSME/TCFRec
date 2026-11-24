@@ -4,6 +4,11 @@ Source code for TCFRec (Time-Aware Complex Frequency Recommendation), a sequenti
 recommendation model combining wavelet feature enhancement with adaptive
 frequency-domain filtering.
 
+## Supplementary material
+
+The [supplementary material (PDF)](TCF_Rec_supplement.pdf) contains Tables S1–S7
+and Figure S1 referenced in the paper.
+
 ## Models
 
 - `src/model/wearec.py` is the original WEARec baseline.
